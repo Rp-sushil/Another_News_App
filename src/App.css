@@ -2,6 +2,16 @@
   text-align: center;
 }
 
+img {
+  height: 200px;
+  width: 200px;
+}
+
+.card {
+  height: 500px;
+  width: 500px;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
