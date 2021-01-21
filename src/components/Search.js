@@ -11,8 +11,11 @@ export default function Search({ handleSearch, val, setVal }) {
           onChange={(e) => setVal(e.target.value)}
           name="query"
           required
+          id="searchBox"
         />
-        <button type="submit">Search</button>
+        <button type="submit" id="search">
+          Search
+        </button>
       </form>
     </div>
   );

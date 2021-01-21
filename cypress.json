@@ -1,0 +1,8 @@
+{
+  "reporter": "mochawesome",
+  "html": false,
+  "json": true,
+  "chromeWebSecurity": false,
+  "screenshotOnRunFailure": false,
+  "video": false
+}

@@ -10,13 +10,19 @@ function App() {
         <div>
           <ul>
             <li>
-              <Link to="/">English</Link>
+              <Link to="/" id="en">
+                English
+              </Link>
             </li>
             <li>
-              <Link to="/hi">Hindi</Link>
+              <Link to="/hi" id="hi">
+                Hindi
+              </Link>
             </li>
             <li>
-              <Link to="/mr">Marathi</Link>
+              <Link to="/mr" id="mr">
+                Marathi
+              </Link>
             </li>
           </ul>
         </div>

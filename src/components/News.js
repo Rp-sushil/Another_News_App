@@ -43,6 +43,12 @@ export default function News() {
     // console.log(isSearching);
   }, [counter, query, lan]);
 
+  useEffect(() => {
+    return () => {
+      setCounter(0);
+    };
+  }, [lan]);
+
   const handleSearch = (e) => {
     e.preventDefault();
     const q = e.target.query.value;
@@ -58,9 +64,20 @@ export default function News() {
   return (
     <div className="news">
       <Search handleSearch={handleSearch} val={val} setVal={setVal} />
-      {query ? <button onClick={handleExit}>Exit Search Mode</button> : ""}
+      {query ? (
+        <button onClick={handleExit} id="exitSearchMode">
+          Exit Search Mode
+        </button>
+      ) : (
+        ""
+      )}
       <Pagination counter={counter} setCounter={setCounter} />
-      <Cards news_data={news_data} />
+      <Cards
+        news_data={news_data}
+        counter={counter}
+        lan={lan || "en"}
+        searchMode={query ? true : false}
+      />
     </div>
   );
 }
